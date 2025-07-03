@@ -1,0 +1,103 @@
+{
+  "gpt_api_bridge": {
+    "openai_api_key": "sk-your-openai-api-key-here",
+    "model": "gpt-4",
+    "fallback_model": "gpt-3.5-turbo",
+    "max_tokens": 4000,
+    "temperature": 0.7,
+    "rate_limit_rpm": 60,
+    "webhook_port": 5000
+  },
+  "external_io": {
+    "sandbox_mount_paths": [
+      "/home/ubuntu/projects",
+      "/home/ubuntu/assets",
+      "/home/ubuntu/output"
+    ],
+    "external_storage": {
+      "type": "local",
+      "path": "/external/storage",
+      "sync_enabled": true
+    },
+    "deployment": {
+      "auto_deploy": true,
+      "target_platforms": ["vercel", "netlify", "heroku"],
+      "domain_config": {
+        "custom_domain": "your-domain.com",
+        "ssl_enabled": true
+      }
+    }
+  },
+  "monetization": {
+    "stripe": {
+      "publishable_key": "pk_test_your-stripe-publishable-key",
+      "secret_key": "sk_test_your-stripe-secret-key",
+      "webhook_secret": "whsec_your-webhook-secret"
+    },
+    "paypal": {
+      "client_id": "your-paypal-client-id",
+      "client_secret": "your-paypal-client-secret",
+      "sandbox_mode": true
+    },
+    "pricing_tiers": {
+      "basic": {
+        "price": 9.99,
+        "features": ["basic_ai_assistance", "template_access"],
+        "limits": {
+          "api_calls_per_month": 1000,
+          "projects": 5
+        }
+      },
+      "pro": {
+        "price": 29.99,
+        "features": ["advanced_ai", "custom_templates", "priority_support"],
+        "limits": {
+          "api_calls_per_month": 10000,
+          "projects": 50
+        }
+      },
+      "enterprise": {
+        "price": 99.99,
+        "features": ["unlimited_ai", "white_label", "custom_integration"],
+        "limits": {
+          "api_calls_per_month": -1,
+          "projects": -1
+        }
+      }
+    }
+  },
+  "3d_engines": {
+    "unity": {
+      "project_template_path": "/templates/unity",
+      "asset_injection_points": [
+        "Assets/Scripts/Generated",
+        "Assets/Prefabs/AI",
+        "Assets/Materials/Generated"
+      ],
+      "build_targets": ["Windows", "Mac", "Linux", "WebGL", "Android", "iOS"]
+    },
+    "godot": {
+      "project_template_path": "/templates/godot",
+      "asset_injection_points": [
+        "scripts/generated",
+        "scenes/ai",
+        "assets/generated"
+      ],
+      "build_targets": ["Windows", "Mac", "Linux", "HTML5", "Android", "iOS"]
+    }
+  },
+  "automation": {
+    "prefab_generator": {
+      "template_directory": "/templates",
+      "output_directory": "/output",
+      "batch_size": 10,
+      "priority_queue_enabled": true
+    },
+    "cli_tools": {
+      "auto_install_dependencies": true,
+      "verbose_logging": true,
+      "backup_before_operations": true
+    }
+  }
+}
+

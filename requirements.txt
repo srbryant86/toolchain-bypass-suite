@@ -1,0 +1,50 @@
+# Toolchain Bypass Suite - Main Requirements
+# Core dependencies for all components
+
+# GPT API Bridge
+openai>=1.0.0
+flask>=2.3.0
+requests>=2.31.0
+
+# External I/O Layer
+watchdog>=3.0.0
+pyyaml>=6.0
+
+# Monetization Kit (OptiStack Integration)
+stripe>=6.0.0
+paypal-checkout-serversdk>=1.0.0
+
+# 3D Engine Linkers
+unity-python>=1.0.0  # Custom Unity integration
+godot-python>=1.0.0  # Custom Godot integration
+
+# Prefab Generator & CLI Tools
+click>=8.1.0
+rich>=13.0.0
+typer>=0.9.0
+
+# Self-Repair and Monitoring
+psutil>=5.9.0
+schedule>=1.2.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Utilities
+python-dotenv>=1.0.0
+colorama>=0.4.6
+tqdm>=4.65.0
+
+# Development and Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Optional: Advanced Features
+# tensorflow>=2.13.0  # For AI-powered optimization
+# torch>=2.0.0        # Alternative ML framework
+# opencv-python>=4.8.0  # Image processing
+# pillow>=10.0.0      # Image manipulation
+
